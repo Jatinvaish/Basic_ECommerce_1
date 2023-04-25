@@ -64,5 +64,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "foodiepie.vercel.app"
+  "proxy": "http://192.168.1.4:4000"
 }
