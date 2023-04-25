@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const errorMiddleWare = require("./middleware/error");
 const fileUpload = require("express-fileupload");
-const path = require("path");
+// const path = require("path");
+const cors = require('cors');
 
 //Config 
 if (process.env.NODE_ENV !== "PRODUCTION") {
@@ -36,7 +37,15 @@ app.use("/api/v1", payment);
 // app.get("*", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
 // });
-
+const corsOptions = {
+  origin: '*',
+  credentials: true,
+  optionSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.set('trust proxy', 1);
 
 //MidleWare For Error
 app.use(errorMiddleWare);
