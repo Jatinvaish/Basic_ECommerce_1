@@ -52,7 +52,7 @@ function App() {
   // const stripePromise = loadStripe('pk_test_51MnnMiSJSEx7GAMC1U3hdu6Idm0QiXAZ6m8twER2eOm2azGqit0AjNGIT6fL1wazxIt0A96K0Q0r5Q4AXIVUY6pE00vXjtHIdC');
   const [stripeApiKey, setStripeApiKey] = useState(process.env.STRIPE_API_KEY);
   async function getStripeApiKey() {
-    const { data } = await axios.get("https://ecommerce-jv.onrender.com/api/v1/stripeapikey");
+    const { data } = await axios.get("/api/v1/stripeapikey");
 
     setStripeApiKey(data.stripeApiKey);
   }
