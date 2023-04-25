@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import RemoveShoppingCartOutlinedIcon from '@mui/icons-material/RemoveShoppingCartOutlined';
 import { Link, useNavigate } from "react-router-dom";
 
-const Cart = ({ }) => {
+const Cart = ({  }) => {
   const { isAuthenticated } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
