@@ -30,8 +30,10 @@ import {
   DELETE_REVIEW_FAIL,
   CLEAR_ERRORS,
 } from "../constants/productConstants";
+// import {BASE_URL} from "../../src/const";
 
 // Get All Products
+const BASE_URL = "http://localhost:4000"
 export const getProduct =
 (keyword = "", currentPage = 1, price = [0, 5000000], category, ratings = 0) =>
   async (dispatch) => {
@@ -63,7 +65,7 @@ export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
-    const { data } = await axios.get("/api/v1/admin/products");
+    const { data } = await axios.get(`/api/v1/admin/products`);
 
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,

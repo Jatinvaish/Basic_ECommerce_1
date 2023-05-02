@@ -39,20 +39,21 @@ import ProductReviews from "./component/Admin/ProductReviews.js";
 import Contact from "./component/layout/Contact/Contact.js";
 import About from "./component/layout/About/About.js";
 import NotFound from "./component/layout/Not Found/NotFound.js";
-
+// import { BASE_URL } from "../src/const";
 import axios from "axios";
 
 
 
 
 function App() {
+  const BASE_URL = "http://localhost:4000"
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   //Get our Stripe(Payment Api)
   // const stripePromise = loadStripe('pk_test_51MnnMiSJSEx7GAMC1U3hdu6Idm0QiXAZ6m8twER2eOm2azGqit0AjNGIT6fL1wazxIt0A96K0Q0r5Q4AXIVUY6pE00vXjtHIdC');
   const [stripeApiKey, setStripeApiKey] = useState(process.env.STRIPE_API_KEY);
   async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
+    const { data } = await axios.get(`/api/v1/stripeapikey`);
 
     setStripeApiKey(data.stripeApiKey);
   }

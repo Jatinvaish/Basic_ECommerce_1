@@ -19,6 +19,8 @@ import EventAvailableOutlinedIcon from '@mui/icons-material/EventAvailableOutlin
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import { createOrder, clearErrors } from "../../actions/orderAction";
 import { useNavigate } from "react-router-dom";
+import {BASE_URL} from "../../const"
+
 
 const Payment = ({ }) => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
@@ -58,7 +60,7 @@ const Payment = ({ }) => {
         },
       };
       const { data } = await axios.post(
-        "/api/v1/payment/process",
+        `/api/v1/payment/process`,
         paymentData,
         config
       );

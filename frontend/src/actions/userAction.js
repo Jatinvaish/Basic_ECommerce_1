@@ -37,8 +37,10 @@ import {
   CLEAR_ERRORS,
 } from "../constants/userConstants";
 import axios from "axios";
-
+// import { BASE_URL } from "../../src/const"
 // Login
+
+const BASE_URL = "http://localhost:4000"
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
@@ -81,9 +83,10 @@ export const loadUser = () => async (dispatch) => {
     dispatch({ type: LOAD_USER_REQUEST });
 
     const { data } = await axios.get(`/api/v1/me`);
-
+    console.log("Data")
     dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
   } catch (error) {
+    console.log("error", error)
     dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message });
   }
 };

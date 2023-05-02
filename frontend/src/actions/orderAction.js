@@ -19,9 +19,9 @@ import {
   ORDER_DETAILS_FAIL,
   CLEAR_ERRORS,
 } from "../constants/orderConstants";
-
+// import {BASE_URL} from "../../src/const"
 import axios from "axios";
-
+const BASE_URL = "http://localhost:4000"
 // Create Order
 export const createOrder = (order) => async (dispatch) => {
   try {
@@ -32,7 +32,7 @@ export const createOrder = (order) => async (dispatch) => {
         "Content-Type": "application/json",
       },
     };
-    const { data } = await axios.post("/api/v1/order/new", order, config);
+    const { data } = await axios.post(`/api/v1/order/new`, order, config);
 
     dispatch({ type: CREATE_ORDER_SUCCESS, payload: data });
   } catch (error) {
@@ -48,7 +48,7 @@ export const myOrders = () => async (dispatch) => {
   try {
     dispatch({ type: MY_ORDERS_REQUEST });
 
-    const { data } = await axios.get("/api/v1/orders/me");
+    const { data } = await axios.get(`/api/v1/orders/me`);
 
     dispatch({ type: MY_ORDERS_SUCCESS, payload: data.orders });
   } catch (error) {
@@ -64,7 +64,7 @@ export const getAllOrders = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_ORDERS_REQUEST });
 
-    const { data } = await axios.get("/api/v1/admin/orders");
+    const { data } = await axios.get(`/api/v1/admin/orders`);
 
     dispatch({ type: ALL_ORDERS_SUCCESS, payload: data.orders });
   } catch (error) {
