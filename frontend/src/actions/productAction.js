@@ -30,10 +30,10 @@ import {
   DELETE_REVIEW_FAIL,
   CLEAR_ERRORS,
 } from "../constants/productConstants";
-// import {BASE_URL} from "../../src/const";
+import {BASE_URL} from "../../src/const";
 
 // Get All Products
-const BASE_URL = "http://localhost:4000"
+// const BASE_URL = "http://localhost:4000"
 export const getProduct =
 (keyword = "", currentPage = 1, price = [0, 5000000], category, ratings = 0) =>
   async (dispatch) => {

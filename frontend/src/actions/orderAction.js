@@ -19,9 +19,9 @@ import {
   ORDER_DETAILS_FAIL,
   CLEAR_ERRORS,
 } from "../constants/orderConstants";
-// import {BASE_URL} from "../../src/const"
+import {BASE_URL} from "../../src/const"
 import axios from "axios";
-const BASE_URL = "http://localhost:4000"
+// const BASE_URL = "http://localhost:4000"
 // Create Order
 export const createOrder = (order) => async (dispatch) => {
   try {

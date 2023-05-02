@@ -37,10 +37,10 @@ import {
   CLEAR_ERRORS,
 } from "../constants/userConstants";
 import axios from "axios";
-// import { BASE_URL } from "../../src/const"
+import { BASE_URL } from "../../src/const"
 // Login
 
-const BASE_URL = "http://localhost:4000"
+// const BASE_URL = "http://localhost:4000"
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });

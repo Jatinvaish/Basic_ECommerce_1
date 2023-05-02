@@ -39,14 +39,14 @@ import ProductReviews from "./component/Admin/ProductReviews.js";
 import Contact from "./component/layout/Contact/Contact.js";
 import About from "./component/layout/About/About.js";
 import NotFound from "./component/layout/Not Found/NotFound.js";
-// import { BASE_URL } from "../src/const";
+import { BASE_URL } from "../src/const";
 import axios from "axios";
 
 
 
 
 function App() {
-  const BASE_URL = "http://localhost:4000"
+  // const BASE_URL = "http://localhost:4000"
   const { isAuthenticated, user } = useSelector((state) => state.user);
 
   //Get our Stripe(Payment Api)
