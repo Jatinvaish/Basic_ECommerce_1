@@ -9,7 +9,7 @@
 /frontend/coverage
 
 # production
-/frontend/build
+
 
 # misc
 .env.local
