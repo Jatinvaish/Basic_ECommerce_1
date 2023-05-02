@@ -1,10 +1,16 @@
 {
-    "version": 2,
-    "name": "ecommerce",
-    "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-       { "src": "/(.*)", "dest": "/app.js" }
-    ]
- }
+   "version": 2,
+   "name": "ecommerce",
+   "builds": [
+      {
+         "src": "package.json", 
+         "use": "vercel-sapper"
+      }
+   ],
+   "routes": [
+      {
+         "src": "/(.*)",
+         "dest": "/app.js"
+      }
+   ]
+}
