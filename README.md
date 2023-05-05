@@ -2,9 +2,6 @@
 
 Hi! My name is **Jatin Vaishnav**, I have created this basic mern stack ecommerce project for learning purpose .
 
-# Prerequisite
-
-
 # Install Dependencies
 
 **For Backend** - `npm i`

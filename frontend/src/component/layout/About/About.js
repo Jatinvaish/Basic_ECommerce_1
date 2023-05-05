@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/tripleayt/image/upload/v1631555947/products/jpyibarlaxawvcvqjv5b.png"
+              src=""
               alt="Founder"
             />
             <Typography>Jatin Vaishnav</Typography>
@@ -26,8 +26,7 @@ const About = () => {
               Visit Instagram
             </Button>
             <span>
-              This is a sample wesbite made by @jatin_vaishnav__. Only with the
-              purpose to teach MERN Stack on the channel 6 Pack Programmer
+              This is a sample wesbite made by @jatin_vaishnav__
             </span>
           </div>
           <div className="aboutSectionContainer2">
