@@ -1,6 +1,7 @@
 const ErrorHandler = require("../utils/errorhandleer");
 
 module.exports = (err, req, res, next) => {
+    //This called a middleware  
     err.statusCode = err.statusCode || 500;
     err.message = err.message || "Internal Server Error"
 

@@ -90,17 +90,17 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     const resetToken = user.getResetPasswordToken();
 
     await user.save({ validateBeforeSave: false });
-
-    const resetPassswordUrl =`${req.protocol}://${req.get(
+    //create a url for forgotpassword
+    const resetPassswordUrl = `${req.protocol}://${req.get(
         "host"
-      )}/password/reset/${resetToken}`;
-    
+    )}/password/reset/${resetToken}`;
+
 
     const message = `You Password rset token is :-\n\n ${resetPassswordUrl} \n\n 
     If you have not requested this email then, please ignore it `;
 
     try {
-
+        //you can also use html body in message(just search it on google)
         await sendEmail({
             email: user.email,
             subject: `J&V Password Recovery`,

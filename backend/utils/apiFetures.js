@@ -10,7 +10,7 @@ class ApiFetures {
         const keyword = this.queryStr.keyword ? {
             name: {
                 $regex: this.queryStr.keyword,  //regex == regular expression or a  opertor of mongodb
-                $options: "i",
+                $options: "i", // "i"  == case intencity means(search capital ,small both)
             },
         }
             : {};

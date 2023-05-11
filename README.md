@@ -1,16 +1,13 @@
-# MERN E-COMMERCE TUTORIAL
-
 Hi! My name is **Jatin Vaishnav**, I have created this basic mern stack ecommerce project for learning purpose .
 
 # Install Dependencies
 
 **For Start the project** - `npm install`
 
+**Must read database.js file** 
 
 ## Env Variables
 
-
-**Essential Variables**
 PORT=
 DB_URI =
 STRIPE_API_KEY=
