@@ -50,7 +50,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 
 //Get All Product 
 exports.getAllProduct = catchAsyncErrors(async (req, res, next) => {
-    const resultPerPage = 4;
+    const resultPerPage = 16;
     const productsCount = await Product.countDocuments();
 
     const apiFeature = new ApiFetures(Product.find(), req.query)

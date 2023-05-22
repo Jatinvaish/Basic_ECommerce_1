@@ -21,7 +21,10 @@ const categories = [
   "Tops",
   "Attire",
   "Camera",
-  "SmartPhones",
+  "Accessories",
+  "BakeryItems",
+  "Cycle",
+  "Other",
 ];
 
 const Products = () => {
@@ -138,7 +141,7 @@ const Products = () => {
 
 
 
-          {resultPerPage <= count && (
+          {resultPerPage <= productsCount && (
             <div className="paginationBox">
               <Pagination
                 activePage={currentPage}

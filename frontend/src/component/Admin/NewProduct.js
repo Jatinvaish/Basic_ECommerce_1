@@ -36,7 +36,10 @@ const NewProduct = ({ }) => {
         "Tops",
         "Attire",
         "Camera",
-        "SmartPhones",
+        "Accessories",
+        "BakeryItems",
+        "Cycle",
+        "Other",
     ];
 
     useEffect(() => {
