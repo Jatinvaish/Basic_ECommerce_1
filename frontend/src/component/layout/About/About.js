@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutSection.css";
 import { Button, Typography, Avatar } from "@mui/material";
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 const About = () => {
   const visitInstagram = () => {
@@ -32,10 +32,10 @@ const About = () => {
           <div className="aboutSectionContainer2">
             <Typography component="h2">Our Brands</Typography>
             <a
-              href="https://www.youtube.com/@SoftwareTechnology1719"
+              href="https://www.linkedin.com/in/jatin-vaishnav-aa5427220/"
               target="blank"
             >
-              <YouTubeIcon className="youtubeSvgIcon" />
+              <LinkedInIcon className="youtubeSvgIcon" />
             </a>
 
             <a href="https://www.instagram.com/jatin_vaishnav__2003/" target="blank">

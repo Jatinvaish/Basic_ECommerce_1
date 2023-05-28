@@ -12,7 +12,7 @@ import { useNavigate ,useLocation} from "react-router-dom";
 
 const LoginSignUp = ({ props}) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch  ();
   const alert = useAlert();
   const location = useLocation()
 
@@ -80,7 +80,7 @@ const LoginSignUp = ({ props}) => {
     }
 
     if (isAuthenticated) {
-      navigate('/account');
+      navigate('/profile');
     }
   }, [dispatch, error, alert, isAuthenticated]);
 
