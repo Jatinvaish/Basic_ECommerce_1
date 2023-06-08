@@ -15,7 +15,7 @@ module.exports = connectDatabase
 
 
 {/*
-                                         FOR  API(Application Programming Interface)
+                                     FOR  API(Application Programming Interface)
 
 1) what is middleware in node js?
 ANS : The middleware in node. js is a function that will have all the access for requesting an object,
@@ -58,4 +58,8 @@ ANS :Redux Middleware allows you to intercept every action sent to the reducer s
 ANS : The types of middleware include database middleware, application server middleware,
       message-oriented middleware, transaction-processing monitors and Web middleware.
 
+3) dispatch :
+ANS : dispatch is a function of the Redux store. You call store. dispatch to dispatch an action. 
+      This is the only way to trigger a state change. With React Redux, your components never access 
+      the store directly. 
 */}
