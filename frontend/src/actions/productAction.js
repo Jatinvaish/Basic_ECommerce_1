@@ -155,12 +155,16 @@ export const deleteProduct = (id) => async (dispatch) => {
 // Get Products Details
 export const getProductDetails = (id) => async (dispatch) => {
   try {
+    //what's happening in line no 159?
+    //nothing it's just give a name to request for differnt specification so we can decide in our 
+    //redux store which type of request dispatch us 
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(`/api/v1/product/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
+      //getting data from the api
       payload: data.product,
     });
   } catch (error) {

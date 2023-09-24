@@ -37,7 +37,7 @@
   
   .profileContainer > div:first-child > a {
     border: none;
-    background-color: tomato;
+    background-color: #9a52ff;
     font: 400 1vmax "Roboto";
     color: white;
     text-decoration: none;

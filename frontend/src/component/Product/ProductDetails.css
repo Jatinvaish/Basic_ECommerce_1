@@ -92,7 +92,7 @@
     cursor: pointer;
     color: white;
     transition: all 0.5s;
-    background-color: tomato;
+    background-color: #9a52ff;
     font: 500 0.7vmax "Roboto";
     border-radius: 20px;
     padding: 0.5vmax 2vmax;
@@ -125,7 +125,7 @@
   
   .submitReview {
     border: none;
-    background-color: tomato;
+    background-color: #9a52ff;
     font: 500 0.7vmax "Roboto";
     border-radius: 20px;
     padding: 0.6vmax 2vmax;

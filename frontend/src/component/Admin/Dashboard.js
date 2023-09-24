@@ -46,7 +46,7 @@ const Dashboard = () => {
     datasets: [
       {
         label: "TOTAL AMOUNT",
-        backgroundColor: ["tomato"],
+        backgroundColor: ["#9a52ff"],
         hoverBackgroundColor: ["rgb(197, 72, 49)"],
         data: [0, totalAmount],
       },

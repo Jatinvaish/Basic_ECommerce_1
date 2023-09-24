@@ -16,6 +16,7 @@ app.use(cookieParser());
 
 
 app.use(bodyParser.json({ limit: "50mb" }))
+//for solve base64 limitation issues when image upload on cloudinary
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }))
 app.use(fileUpload());
 
@@ -38,12 +39,12 @@ app.use("/api/v1", payment);
 //=============================for live api check===============================
 
 
-//
-app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+// });
 
 
 // ================================================================

@@ -38,17 +38,6 @@
     color: white;
   }
   
-  .banner::after {
-    content: "";
-    width: 100vw;
-    height: 100vmin;
-    background-color: #ffffff;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    clip-path: polygon(100% 68%, 0 100%, 100% 100%);
-    max-width: 100%;
-  }
   
   .homeHeading {
     text-align: center;
@@ -106,7 +95,7 @@
   
   .productCard > span {
     margin: 0.5vmax;
-    color: tomato;
+    color: #9a52ff;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 1vmax;
   }

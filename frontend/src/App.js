@@ -67,7 +67,6 @@ function App() {
  // window.addEventListener("contextmenu", (e) => e.preventDefault());
 
   return (
-
     <Suspense>
       <BrowserRouter>
         <Header />

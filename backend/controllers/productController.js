@@ -18,7 +18,7 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
     }
 
     const imagesLinks = [];
-
+    //push every images in product's folder  
     for (let i = 0; i < images.length; i++) {
         const result = await cloudinary.v2.uploader.upload(images[i], {
             folder: "products",
@@ -143,9 +143,9 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
         runValidators: true,
         useFindAndModify: false
     });
-//why we send products data in update?
-//because we want to see updated product immidiately , sending product in responce is update the product immidiately 
-//so we can see updated value(product) withouth refreshing the page.
+    //why we send products data in update?
+    //because we want to see updated product immidiately , sending product in responce is update the product immidiately 
+    //so we can see updated value(product) withouth refreshing the page.
     res.status(200).json({
         success: true,
         product
